@@ -148,6 +148,7 @@ class DataContext extends BehatContext implements KernelAwareInterface
         $user->setEmail($this->faker->email());
         $user->setEnabled('yes' === $enabled);
         $user->setPlainPassword($password);
+        $user->setCurrency('EUR');
 
         if (null !== $role) {
             $user->addRole($role);
