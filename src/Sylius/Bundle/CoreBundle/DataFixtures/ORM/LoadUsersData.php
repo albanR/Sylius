@@ -28,6 +28,8 @@ class LoadUsersData extends DataFixture
     {
         $user = new User();
 
+        $user->setFirstname($this->faker->firstName);
+        $user->setLastname($this->faker->lastName);
         $user->setUsername('sylius');
         $user->setEmail('sylius@example.com');
         $user->setPlainPassword('sylius');
@@ -44,6 +46,8 @@ class LoadUsersData extends DataFixture
 
             $username = $this->faker->username;
 
+            $user->setFirstname($this->faker->firstName);
+            $user->setLastname($this->faker->lastName);
             $user->setUsername($username);
             $user->setEmail($username.'@example.com');
             $user->setPlainPassword($username);
